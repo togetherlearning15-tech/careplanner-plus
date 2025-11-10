@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import { useCarePlannerAuth } from '../../contexts/CarePlannerAuth';
 import ServiceUsersModule from './ServiceUsersModule';
+import StaffModule from './StaffModule';
+import RotaModule from './RotaModule';
+import DailyNotesModule from './DailyNotesModule';
+import MARModule from './MARModule';
 
 type ViewType =
   | 'dashboard'
@@ -54,33 +58,13 @@ function MainDashboard() {
       case 'service-users':
         return <ServiceUsersModule />;
       case 'staff':
-        return (
-          <div>
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">Staff Management</h2>
-            <p className="text-gray-600">Staff management module coming soon...</p>
-          </div>
-        );
+        return <StaffModule />;
       case 'rota':
-        return (
-          <div>
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">Rota Scheduling</h2>
-            <p className="text-gray-600">Rota scheduling module coming soon...</p>
-          </div>
-        );
+        return <RotaModule />;
       case 'mar':
-        return (
-          <div>
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">Medication Administration Record</h2>
-            <p className="text-gray-600">MAR module coming soon...</p>
-          </div>
-        );
+        return <MARModule />;
       case 'daily-notes':
-        return (
-          <div>
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">Daily Notes</h2>
-            <p className="text-gray-600">Daily notes module coming soon...</p>
-          </div>
-        );
+        return <DailyNotesModule />;
       case 'incidents':
         return (
           <div>
